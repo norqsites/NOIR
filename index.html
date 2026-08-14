@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NOIR Coffee</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+        NOIR
+    </div>
+
+    <nav>
+
+        <a href="#story">
+            Story
+        </a>
+
+        <a href="#product">
+            Product
+        </a>
+
+        <a href="#collection">
+            Collection
+        </a>
+
+        <a href="#contact">
+            Shop
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==========================================
+     FLOATING COFFEE
+
+     IMPORTANT:
+     There is ONLY ONE moving coffee.
+========================================== -->
+
+<img
+    src="assets/coffee.png"
+    class="travelling-coffee"
+    alt="NOIR Coffee"
+>
+
+<!-- STATIC HERO COFFEE -->
+<img
+    src="assets/coffee3.png"
+    class="hero-static-coffee"
+    alt="NOIR Coffee"
+>
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            PREMIUM COFFEE
+        </p>
+
+        <h1>
+            WAKE UP
+            <span>DIFFERENT.</span>
+        </h1>
+
+        <p class="description">
+            Bold coffee crafted for slow mornings,
+            long nights and everything between.
+        </p>
+
+        <button>
+            Discover NOIR
+        </button>
+
+    </div>
+    
+
+</section>
+
+
+
+<!-- ==========================================
+     STORY
+========================================== -->
+
+<section class="story" id="story">
+
+    <div class="story-text">
+
+        <p class="eyebrow">
+            THE STORY
+        </p>
+
+        <h2>
+            Not just coffee.
+            <span>A ritual.</span>
+        </h2>
+
+        <p>
+            Carefully roasted beans with deep
+            chocolate, caramel and toasted nut notes.
+        </p>
+
+    </div>
+
+
+    <!-- STATIC MACCHIATO -->
+
+    <!-- <div class="story-drink">
+
+        <img
+            src="assets/story.png"
+            alt="Caramel Macchiato"
+        >
+
+    </div> -->
+
+</section>
+
+
+
+<!-- ==========================================
+     PRODUCT / BLEND
+========================================== -->
+
+<section class="product-section" id="product">
+
+    <div class="product-copy">
+
+        <p class="eyebrow">
+            THE BLEND
+        </p>
+
+        <h2>
+            DARK.
+            <br>
+            BOLD.
+            <br>
+            INTENSE.
+        </h2>
+
+        <p class="blend-description">
+            A deep roast created for people
+            who want their coffee powerful,
+            smooth and unforgettable.
+        </p>
+
+    </div>
+
+
+    <!-- COFFEE BEAN BACKGROUND -->
+
+    <div class="blend-beans">
+
+        <img
+            src="assets/coffeeblend.png"
+            alt="Coffee Beans"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     COLLECTION
+========================================== -->
+
+<section
+    class="collection"
+    id="collection"
+>
+
+    <div class="collection-heading">
+
+        <p class="eyebrow">
+            THE COLLECTION
+        </p>
+
+        <h2>
+            FIND YOUR
+            <span>NOIR.</span>
+        </h2>
+
+    </div>
+
+
+
+    <div class="coffee-grid">
+
+
+        <!-- CLASSIC -->
+
+        <div class="coffee-card">
+
+            <div class="static-coffee">
+
+                <img
+                    src="assets/coffee2.png"
+                    alt="Classic Coffee"
+                >
+
+            </div>
+
+            <h3>
+                CLASSIC
+            </h3>
+
+            <p>
+                Smooth & balanced
+            </p>
+
+        </div>
+
+
+
+        <!-- DARK -->
+
+        <div class="coffee-card dark-card">
+
+            <div class="static-coffee">
+
+                <!--
+                    NO IMAGE HERE.
+
+                    The travelling coffee becomes
+                    the DARK coffee.
+                -->
+
+            </div>
+
+            <h3>
+                DARK
+            </h3>
+
+            <p>
+                Deep & intense
+            </p>
+
+        </div>
+
+
+
+        <!-- BOLD -->
+
+        <div class="coffee-card">
+
+            <div class="static-coffee">
+
+                <img
+                    src="assets/coffee3.png"
+                    alt="Bold Coffee"
+                >
+
+            </div>
+
+            <h3>
+                BOLD
+            </h3>
+
+            <p>
+                Rich & powerful
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CTA
+========================================== -->
+
+<section
+    class="cta"
+    id="contact"
+>
+
+    <!-- LEFT SIDE -->
+
+    <div class="cta-coffee-space">
+
+        <!--
+            The travelling coffee will
+            move here automatically.
+        -->
+
+    </div>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="cta-content">
+
+        <p class="eyebrow">
+            YOUR MORNING STARTS HERE
+        </p>
+
+        <h2>
+            MAKE IT
+            <span>NOIR.</span>
+        </h2>
+
+        <p>
+            Bold coffee.
+            Slow moments.
+            Your ritual.
+        </p>
+
+        <button>
+            Shop Coffee
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

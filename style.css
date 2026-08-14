@@ -1,0 +1,888 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #e8ddcd;
+
+    color: #17120e;
+
+    overflow-x: hidden;
+}
+
+
+section {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    padding: 120px 8%;
+
+}
+
+
+button {
+
+    border: none;
+
+    background: #17120e;
+
+    color: white;
+
+    padding: 18px 35px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+
+.eyebrow {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: #17120e;
+
+    font-size: 16px;
+
+}
+
+
+
+/* ==========================================
+   TRAVELLING COFFEE
+========================================== */
+
+.travelling-coffee {
+
+    position: fixed;
+
+    width: 330px;
+
+    left: 50%;
+
+    top: 50%;
+
+    z-index: 50;
+
+    pointer-events: none;
+
+    transform-origin: center center;
+
+    filter:
+        drop-shadow(
+            20px 30px 30px
+            rgba(0, 0, 0, 0.25)
+        );
+
+}
+
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    display: flex;
+
+    align-items: center;
+
+    background: #e8ddcd;
+
+}
+
+
+.hero-content {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            70px,
+            10vw,
+            155px
+        );
+
+    line-height: 0.78;
+
+    letter-spacing: -7px;
+
+    font-weight: 900;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: #75482d;
+
+    margin-left: 20px;
+
+}
+
+
+.description {
+
+    max-width: 500px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin: 45px 0 30px;
+
+}
+
+
+
+/* ==========================================
+   STORY
+========================================== */
+
+.story {
+
+    display: flex;
+
+    align-items: center;
+
+    background: #211812;
+
+    color: #f1eadf;
+
+}
+
+
+.story-text {
+
+    max-width: 800px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.story h2 {
+
+    font-size:
+        clamp(
+            60px,
+            8vw,
+            125px
+        );
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+}
+
+
+.story h2 span {
+
+    display: block;
+
+    color: #c58c5b;
+
+}
+
+
+.story-text > p:last-child {
+
+    max-width: 500px;
+
+    margin-top: 45px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ==========================================
+   PRODUCT / BLEND
+========================================== */
+
+.product-section {
+
+    display: flex;
+
+    align-items: center;
+
+    background: #c58c5b;
+
+    color: #17120e;
+
+}
+
+
+.product-copy {
+
+    width: 55%;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.product-copy h2 {
+
+    font-size:
+        clamp(
+            70px,
+            10vw,
+            150px
+        );
+
+    line-height: 0.78;
+
+    letter-spacing: -7px;
+
+}
+
+
+.blend-description {
+
+    max-width: 420px;
+
+    margin-top: 40px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* ==========================================
+   COLLECTION
+========================================== */
+
+.collection {
+
+    background: #f1eadf;
+
+    color: #17120e;
+
+    min-height: 110vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.collection-heading {
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.collection-heading h2 {
+
+    font-size:
+        clamp(
+            70px,
+            9vw,
+            140px
+        );
+
+    line-height: 0.8;
+
+    letter-spacing: -6px;
+
+}
+
+
+.collection-heading h2 span {
+
+    color: #75482d;
+
+}
+
+
+
+/* ==========================================
+   COFFEE GRID
+========================================== */
+
+.coffee-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-top: 60px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.coffee-card {
+
+    border-top:
+        1px solid
+        #17120e;
+
+    padding-top: 25px;
+
+}
+
+
+.static-coffee {
+
+    height: 330px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.static-coffee img {
+
+    width: 390px;
+
+    filter:
+        drop-shadow(
+            15px 20px 20px
+            rgba(0, 0, 0, 0.2)
+        );
+
+}
+
+
+.coffee-card:nth-child(1)
+.static-coffee img {
+
+    transform:
+        rotate(-6deg);
+
+}
+
+
+.coffee-card:nth-child(3)
+.static-coffee img {
+
+    transform:
+        rotate(-4deg)
+        scale(0.95);
+
+}
+
+
+.coffee-card h3 {
+
+    font-size: 22px;
+
+    margin-top: 15px;
+
+}
+
+
+.coffee-card p {
+
+    margin-top: 8px;
+
+    color: #6b5a4c;
+
+}
+
+
+
+/* ==========================================
+   CTA
+========================================== */
+
+.cta {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        45% 55%;
+
+    align-items: center;
+
+    background: #17120e;
+
+    color: #f1eadf;
+
+    padding-left: 8%;
+
+    padding-right: 8%;
+
+}
+
+
+.cta-coffee-space {
+
+    height: 100%;
+
+}
+
+
+.cta-content {
+
+    padding-left: 5%;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.cta-content h2 {
+
+    font-size:
+        clamp(
+            80px,
+            11vw,
+            170px
+        );
+
+    line-height: 0.8;
+
+    letter-spacing: -8px;
+
+}
+
+
+.cta-content h2 span {
+
+    display: block;
+
+    color: #c58c5b;
+
+}
+
+
+.cta-content > p:not(.eyebrow) {
+
+    max-width: 420px;
+
+    margin-top: 35px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+
+.cta button {
+
+    margin-top: 40px;
+
+    background: #c58c5b;
+
+    color: #17120e;
+
+}
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+
+    .navbar {
+
+        padding:
+            20px 6%;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    section {
+
+        padding:
+            100px 6%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 17vw;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .travelling-coffee {
+
+        width: 220px;
+
+    }
+  /* STATIC HERO COFFEE */
+
+   .hero-static-coffee {
+    width: 280px;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-3deg);
+}
+    .story h2 {
+
+        font-size: 17vw;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .product-copy {
+
+        width: 100%;
+
+    }
+
+
+    .product-copy h2 {
+
+        font-size: 18vw;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .coffee-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .static-coffee {
+
+        height: 250px;
+
+    }
+
+
+    .cta {
+
+        grid-template-columns: 1fr;
+
+        min-height: 100vh;
+
+    }
+
+
+    .cta-coffee-space {
+
+        display: none;
+
+    }
+
+
+    .cta-content {
+
+        padding-left: 0;
+
+    }
+
+
+    .cta-content h2 {
+
+        font-size: 20vw;
+
+        letter-spacing: -4px;
+
+    }
+
+}
+
+/* ========================================
+   STATIC HERO COFFEE
+======================================== */
+
+.hero-static-coffee {
+
+    position: absolute;
+
+    width: 330px;
+
+    /*
+        Right side of hero.
+        This coffee NEVER moves with GSAP.
+    */
+
+    right: 8%;
+
+    top: 48%;
+
+    transform: translateY(-50%) rotate(29deg);
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(
+            20px 30px 30px rgba(0, 0, 0, 0.25)
+        );
+}
+
+/* ========================================
+   STORY STATIC DRINK
+======================================== */
+/* ========================================
+   STORY STATIC DRINK
+======================================== */
+
+.story {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Static caramel macchiato */
+/* ========================================
+   STORY — STATIC 3D DRINK
+======================================== */
+
+.story-drink {
+    position: absolute;
+
+    right: 2%;
+    top: 50%;
+
+    width: 500px;
+    height: 520px;
+
+    transform:
+        translateY(-50%)
+        perspective(1000px)
+        rotateY(-8deg)
+        rotateX(2deg)
+        rotateZ(3deg);
+
+    transform-style: preserve-3d;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* Actual drink */
+
+.story-drink img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transform:
+        translateZ(25px)
+        scale(1.02);
+
+    filter:
+        drop-shadow(
+            18px 25px 18px
+            rgba(0, 0, 0, 0.28)
+        );
+
+    transition: transform 0.4s ease;
+}
+
+
+/*
+    Travelling coffee must stay
+    ABOVE the static drink.
+*/
+
+.travelling-coffee {
+
+    z-index: 50;
+
+}
+/* ========================================
+   STORY STATIC COFFEE
+======================================== */
+
+
+
+
+/* Make story text stay above background */
+
+.story-text {
+
+    position: relative;
+
+    z-index: 5;
+}
+
+/* ========================================
+   BLEND COFFEE BEANS
+======================================== */
+
+.blend-beans {
+
+    position: absolute;
+
+    right: 3%;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 520px;
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.blend-beans img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    opacity: 0.9;
+
+    filter:
+        drop-shadow(
+            10px 20px 20px rgba(0, 0, 0, 0.2)
+        );
+}
