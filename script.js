@@ -40,120 +40,25 @@ const cta =
     document.querySelector(".cta");
 
 
-
 /* ==========================================
-   INITIAL COFFEE POSITION
-
-   HERO:
-
-   Right side
-   Slightly tilted right
+   RESPONSIVE COFFEE JOURNEY
 ========================================== */
 
-gsap.set(coffee, {
-
-    xPercent: -50,
-    yPercent: -50,
-
-    x: "24vw",
-
-    y: "-2vh",
-
-    rotation: 7,
-
-    scale: 1
-
-});
-
+const mm = gsap.matchMedia();
 
 
 /* ==========================================
-   HERO TEXT ENTRANCE
+   DESKTOP
 ========================================== */
 
-gsap.from(
-    ".hero-content",
-    {
+mm.add("(min-width: 769px)", () => {
 
-        opacity: 0,
+    /* INITIAL POSITION */
 
-        y: 60,
+    gsap.set(coffee, {
 
-        duration: 1.2,
-
-        ease: "power3.out"
-
-    }
-);
-
-
-
-/* ==========================================
-   COFFEE ENTRANCE
-========================================== */
-
-gsap.from(
-    coffee,
-    {
-
-        opacity: 0,
-
-        scale: 0.75,
-
-        rotation: -10,
-
-        duration: 1.3,
-
-        delay: 0.2,
-
-        ease: "power3.out"
-
-    }
-);
-
-
-
-/* ==========================================
-   MAIN COFFEE JOURNEY
-========================================== */
-
-const coffeeJourney =
-    gsap.timeline({
-
-        scrollTrigger: {
-
-            trigger: hero,
-
-            start: "top top",
-
-            /*
-                The timeline continues
-                all the way until CTA.
-            */
-
-            endTrigger: cta,
-
-            end: "top top",
-
-            scrub: 1.2,
-
-            invalidateOnRefresh: true
-
-        }
-
-    });
-
-
-
-/* ==========================================
-   HERO
-
-   RIGHT + SLIGHT RIGHT TILT
-========================================== */
-
-coffeeJourney.to(
-    coffee,
-    {
+        xPercent: -50,
+        yPercent: -50,
 
         x: "24vw",
 
@@ -161,60 +66,320 @@ coffeeJourney.to(
 
         rotation: 7,
 
-        scale: 1,
+        scale: 1
 
-        duration: 1
+    });
 
-    }
-);
 
+    /* HERO ENTRANCE */
+
+    gsap.from(
+        coffee,
+        {
+            opacity: 0,
+
+            scale: 0.75,
+
+            rotation: -10,
+
+            duration: 1.3,
+
+            delay: 0.2,
+
+            ease: "power3.out"
+        }
+    );
+
+
+    /* DESKTOP JOURNEY */
+
+    const coffeeJourney =
+        gsap.timeline({
+
+            scrollTrigger: {
+
+                trigger: hero,
+
+                start: "top top",
+
+                endTrigger: cta,
+
+                end: "top top",
+
+                scrub: 1.2,
+
+                invalidateOnRefresh: true
+
+            }
+
+        });
+
+
+    /* HERO */
+
+    coffeeJourney.to(
+        coffee,
+        {
+
+            x: "24vw",
+
+            y: "-2vh",
+
+            rotation: 7,
+
+            scale: 1,
+
+            duration: 1
+
+        }
+    );
+
+
+    /* HERO → STORY */
+
+    coffeeJourney.to(
+        coffee,
+        {
+
+            x: "25vw",
+
+            y: "17vh",
+
+            rotation: 3,
+
+            scale: 1.45,
+
+            duration: 1.5,
+
+            ease: "none"
+
+        }
+    );
+
+
+    /* STORY → BLEND */
+
+    coffeeJourney.to(
+        coffee,
+        {
+
+            x: "30vw",
+
+            y: "8vh",
+
+            rotation: -7,
+
+            scale: 1,
+
+            duration: 1.5,
+
+            ease: "none"
+
+        }
+    );
+
+
+    /* BLEND → COLLECTION */
+
+    coffeeJourney.to(
+        coffee,
+        {
+
+            x: "0vw",
+
+            y: "5vh",
+
+            rotation: 0,
+
+            scale: 1.05,
+
+            duration: 1.5,
+
+            ease: "power2.inOut"
+
+        }
+    );
+
+
+    /* COLLECTION HOLD */
+
+    coffeeJourney.to(
+        coffee,
+        {
+
+            x: "0vw",
+
+            y: "5vh",
+
+            rotation: 0,
+
+            scale: 1.05,
+
+            duration: 1
+
+        }
+    );
+
+
+    /* COLLECTION → CTA */
+
+    coffeeJourney.to(
+        coffee,
+        {
+
+            x: "-28vw",
+
+            y: "5vh",
+
+            rotation: -5,
+
+            scale: 1.08,
+
+            duration: 1.5,
+
+            ease: "power2.inOut"
+
+        }
+    );
+
+
+    /* CTA HOLD */
+
+    coffeeJourney.to(
+        coffee,
+        {
+
+            x: "-28vw",
+
+            y: "5vh",
+
+            rotation: -5,
+
+            scale: 1.08,
+
+            duration: 1
+
+        }
+    );
+
+});
 
 
 /* ==========================================
-   HERO → STORY
-
-   SAME HORIZONTAL POSITION
-
-   MOVES DOWN
-
-   BECOMES BIGGER
+   MOBILE
 ========================================== */
 
-coffeeJourney.to(
-    coffee,
-    {
-        x: "27vw",
-        y: "17vh",
-        rotation: 3,
-        scale: 1.55,
-        duration: 1.5,
-        ease: "none"
-    }
-);
+mm.add("(max-width: 768px)", () => {
+
+    /* INITIAL MOBILE POSITION */
+gsap.set(coffee, {
+
+    xPercent: -50,
+    yPercent: -50,
+
+    x: "30vw",
+
+    y: "32vh",
+
+    rotation: 9,
+
+    scale: 1.72
+
+});
 
 
+    /* MOBILE ENTRANCE */
 
-/* ==========================================
-   STORY → BLEND
+    gsap.from(
+        coffee,
+        {
 
-   MOVE RIGHT
+            opacity: 0,
 
-   TILT LEFT
-========================================== */
+            scale: 0.65,
 
-coffeeJourney.to(
+            rotation: -8,
+
+            duration: 1.1,
+
+            delay: 0.2,
+
+            ease: "power3.out"
+
+        }
+    );
+
+
+    /* MOBILE JOURNEY */
+
+    const mobileJourney =
+        gsap.timeline({
+
+            scrollTrigger: {
+
+                trigger: hero,
+
+                start: "top top",
+
+                endTrigger: cta,
+
+                end: "top top",
+
+                scrub: 1.4,
+
+                invalidateOnRefresh: true
+
+            }
+
+        });
+
+
+    /* ======================================
+       HERO
+
+       Small movement on right
+    ====================================== */
+
+   mobileJourney.to(
     coffee,
     {
 
         x: "30vw",
 
-        y: "8vh",
+        y: "32vh",
 
-        rotation: -7,
+        rotation: 5,
 
-        scale: 1,
+        scale: 0.82,
 
-        duration: 1.5,
+        duration: 1
+
+    }
+);
+
+
+    /* ======================================
+       HERO → STORY
+
+       Move DOWN slightly
+
+       Do NOT move aggressively
+       left/right on mobile.
+    ====================================== */
+
+  mobileJourney.to(
+    coffee,
+    {
+
+        x: "23vw",
+
+        y: "25vh",
+
+        rotation: 2,
+
+        scale: 0.95,
+
+        duration: 1.6,
 
         ease: "none"
 
@@ -222,29 +387,47 @@ coffeeJourney.to(
 );
 
 
+    /* ======================================
+       STORY → BLEND
 
-/* ==========================================
-   BLEND → COLLECTION
+       Move slightly right
+       and tilt left
+    ====================================== */
 
-   MOVE TO CENTER
+    mobileJourney.to(
+        coffee,
+        {
 
-   This gets the coffee visually
-   toward the DARK card.
-========================================== */
+            x: "28vw",
 
-coffeeJourney.to(
+            y: "18vh",
+
+            rotation: -7,
+
+            scale: 0.9,
+
+            duration: 1.6,
+
+            ease: "none"
+
+        }
+    );
+
+/* BLEND → COLLECTION */
+
+mobileJourney.to(
     coffee,
     {
 
         x: "0vw",
 
-        y: "5vh",
+        y: "20vh",
 
         rotation: 0,
 
-        scale: 1.05,
+        scale: 0.95,
 
-        duration: 1.5,
+        duration: 1.6,
 
         ease: "power2.inOut"
 
@@ -252,54 +435,45 @@ coffeeJourney.to(
 );
 
 
+/* COLLECTION HOLD */
 
-/* ==========================================
-   COLLECTION HOLD
-
-   Coffee stays here for a moment.
-
-   This creates the feeling that
-   it has "landed".
-========================================== */
-
-coffeeJourney.to(
+mobileJourney.to(
     coffee,
     {
 
         x: "0vw",
 
-        y: "5vh",
+        y: "20vh",
 
         rotation: 0,
 
-        scale: 1.05,
+        scale: 1.65,
 
-        duration: 1
+        duration: 1.2
 
     }
 );
 
-
-
-/* ==========================================
+  /* ======================================
    COLLECTION → CTA
 
-   MOVE COFFEE TO LEFT
-========================================== */
+   Move coffee toward the LEFT
+   and start making it larger.
+====================================== */
 
-coffeeJourney.to(
+mobileJourney.to(
     coffee,
     {
 
-        x: "-28vw",
+        x: "-25vw",
 
-        y: "5vh",
+        y: "10vh",
 
         rotation: -5,
 
-        scale: 1.08,
+        scale: 1.15,
 
-        duration: 1.5,
+        duration: 1.7,
 
         ease: "power2.inOut"
 
@@ -307,28 +481,32 @@ coffeeJourney.to(
 );
 
 
+/* ======================================
+   CTA
 
-/* ==========================================
-   CTA COFFEE FINAL POSITION
-========================================== */
+   LARGE FINAL COFFEE
+====================================== */
 
-coffeeJourney.to(
+mobileJourney.to(
     coffee,
     {
 
         x: "-28vw",
 
-        y: "5vh",
+        y: "8vh",
 
-        rotation: -5,
+        rotation: -7,
 
-        scale: 1.08,
+        scale: 1.45,
 
-        duration: 1
+        duration: 1,
+
+        ease: "power2.out"
 
     }
 );
 
+});
 
 
 /* ==========================================

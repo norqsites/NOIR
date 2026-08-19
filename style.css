@@ -528,11 +528,7 @@ nav a {
 }
 
 
-.cta-coffee-space {
 
-    height: 100%;
-
-}
 
 
 .cta-content {
@@ -596,129 +592,6 @@ nav a {
 
 
 
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media (max-width: 768px) {
-
-
-    .navbar {
-
-        padding:
-            20px 6%;
-
-    }
-
-
-    nav {
-
-        display: none;
-
-    }
-
-
-    section {
-
-        padding:
-            100px 6%;
-
-    }
-
-
-    .hero h1 {
-
-        font-size: 17vw;
-
-        letter-spacing: -4px;
-
-    }
-
-
-    .travelling-coffee {
-
-        width: 220px;
-
-    }
-  /* STATIC HERO COFFEE */
-
-   .hero-static-coffee {
-    width: 280px;
-    right: 4%;
-    top: 50%;
-    transform: translateY(-50%) rotate(-3deg);
-}
-    .story h2 {
-
-        font-size: 17vw;
-
-        letter-spacing: -3px;
-
-    }
-
-
-    .product-copy {
-
-        width: 100%;
-
-    }
-
-
-    .product-copy h2 {
-
-        font-size: 18vw;
-
-        letter-spacing: -4px;
-
-    }
-
-
-    .coffee-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .static-coffee {
-
-        height: 250px;
-
-    }
-
-
-    .cta {
-
-        grid-template-columns: 1fr;
-
-        min-height: 100vh;
-
-    }
-
-
-    .cta-coffee-space {
-
-        display: none;
-
-    }
-
-
-    .cta-content {
-
-        padding-left: 0;
-
-    }
-
-
-    .cta-content h2 {
-
-        font-size: 20vw;
-
-        letter-spacing: -4px;
-
-    }
-
-}
 
 /* ========================================
    STATIC HERO COFFEE
@@ -885,4 +758,545 @@ nav a {
         drop-shadow(
             10px 20px 20px rgba(0, 0, 0, 0.2)
         );
+}
+
+/* ==========================================
+   MOBILE — COMPLETE RESPONSIVE FIX
+========================================== */
+/* ==========================================
+   MOBILE — PREMIUM MOBILE EXPERIENCE
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* ==========================================
+       GLOBAL
+    ========================================== */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        min-height: 100svh;
+        padding: 100px 6% 60px;
+        overflow: hidden;
+    }
+
+
+    /* ==========================================
+       NAVBAR
+    ========================================== */
+
+    .navbar {
+        padding: 18px 6%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    /* ==========================================
+       TRAVELLING COFFEE
+       
+       Smaller by default.
+       GSAP controls its movement.
+    ========================================== */
+
+    .travelling-coffee {
+
+        width: 155px;
+
+        left: 50%;
+        top: 50%;
+
+        z-index: 50;
+
+        filter:
+            drop-shadow(
+                10px 15px 15px
+                rgba(0, 0, 0, 0.25)
+            );
+    }
+
+
+    /* ==========================================
+       HERO
+    ========================================== */
+
+    .hero {
+
+        min-height: 100svh;
+
+        display: flex;
+
+        align-items: flex-start;
+
+        padding-top: 125px;
+
+        position: relative;
+    }
+
+    .hero-content {
+
+        width: 100%;
+
+        max-width: none;
+
+        z-index: 5;
+    }
+
+
+    /* Eyebrow */
+
+    .eyebrow {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 22px;
+    }
+
+
+    /* Main heading */
+
+    .hero h1 {
+
+    font-size: clamp(52px, 15vw, 70px);
+
+    line-height: 0.84;
+
+    letter-spacing: -3px;
+
+    max-width: 100%;
+}
+
+    .hero h1 span {
+
+        margin-left: 5px;
+    }
+
+
+    /* Description */
+
+    .description {
+
+        max-width: 92%;
+
+        font-size: 15px;
+
+        line-height: 1.5;
+
+        margin: 28px 0 25px;
+
+        position: relative;
+
+        z-index: 10;
+    }
+
+
+    /* Button */
+
+    .hero button {
+
+        padding: 14px 25px;
+
+        font-size: 13px;
+
+        position: relative;
+
+        z-index: 10;
+    }
+
+
+    /* ==========================================
+       HERO STATIC COFFEE
+       
+       IMPORTANT:
+       Hide the second coffee on mobile.
+       The travelling coffee becomes the hero
+       visual instead.
+    ========================================== */
+
+    .hero-static-coffee {
+        display: none;
+    }
+
+
+    /* ==========================================
+       STORY
+    ========================================== */
+
+    .story {
+
+        min-height: 100svh;
+
+        display: flex;
+
+        align-items: flex-start;
+
+        padding-top: 115px;
+
+        position: relative;
+    }
+
+    .story-text {
+
+        width: 100%;
+
+        max-width: none;
+
+        z-index: 5;
+    }
+
+    .story h2 {
+
+        font-size: 16vw;
+
+        line-height: 0.86;
+
+        letter-spacing: -3px;
+
+        max-width: 100%;
+    }
+
+    .story-text > p:last-child {
+
+        max-width: 82%;
+
+        margin-top: 30px;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    /* Static story drink */
+
+    .story-drink {
+
+        width: 250px;
+
+        height: 280px;
+
+        right: -50px;
+
+        top: 73%;
+
+        transform:
+            translateY(-50%)
+            rotate(4deg);
+
+        opacity: 0.9;
+    }
+
+
+    /* ==========================================
+       BLEND
+    ========================================== */
+
+    .product-section {
+
+        min-height: 100svh;
+
+        display: flex;
+
+        align-items: flex-start;
+
+        padding-top: 115px;
+
+        position: relative;
+    }
+
+    .product-copy {
+
+        width: 100%;
+
+        z-index: 5;
+    }
+
+
+    /* Smaller blend heading */
+
+    .product-copy h2 {
+
+        font-size: 15.5vw;
+
+        line-height: 0.82;
+
+        letter-spacing: -3px;
+    }
+
+
+    .blend-description {
+
+        max-width: 78%;
+
+        margin-top: 28px;
+
+        font-size: 15px;
+
+        line-height: 1.55;
+    }
+
+
+    /* Coffee beans */
+
+    .blend-beans {
+
+        width: 320px;
+
+        height: 320px;
+
+        right: -85px;
+
+        top: 72%;
+
+        transform:
+            translateY(-50%)
+            rotate(-5deg);
+
+        opacity: 0.7;
+
+        z-index: 1;
+    }
+
+
+    /* ==========================================
+       COLLECTION
+    ========================================== */
+
+    .collection {
+
+        min-height: auto;
+
+        padding-top: 100px;
+
+        padding-bottom: 100px;
+
+        overflow: hidden;
+    }
+
+
+    .collection-heading h2 {
+
+        font-size: 16vw;
+
+        line-height: 0.82;
+
+        letter-spacing: -4px;
+    }
+
+
+    .coffee-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        margin-top: 45px;
+
+        z-index: 5;
+    }
+
+
+    .coffee-card {
+
+        padding-top: 18px;
+
+        position: relative;
+    }
+
+
+    /*
+       IMPORTANT:
+       Every collection image gets
+       exactly the same visual box.
+    */
+
+    .static-coffee {
+
+        height: 240px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        overflow: visible;
+    }
+
+
+    .static-coffee img {
+
+        width: 280px;
+
+        height: 220px;
+
+        object-fit: contain;
+
+        filter:
+            drop-shadow(
+                12px 18px 18px
+                rgba(0, 0, 0, 0.2)
+            );
+    }
+
+
+    /* Remove the old size difference */
+
+    .coffee-card:nth-child(1)
+    .static-coffee img {
+
+        width: 280px;
+
+        height: 220px;
+
+        transform: rotate(-6deg);
+    }
+
+
+    .coffee-card:nth-child(3)
+    .static-coffee img {
+
+        width: 280px;
+
+        height: 220px;
+
+        transform:
+            rotate(-4deg)
+            scale(1);
+    }
+
+
+    .coffee-card h3 {
+
+        font-size: 19px;
+
+        margin-top: 12px;
+    }
+
+    .coffee-card p {
+
+        font-size: 14px;
+
+        margin-top: 6px;
+    }
+
+
+    /* ==========================================
+       DARK CARD
+       
+       The travelling coffee becomes the
+       DARK product.
+    ========================================== */
+
+    .dark-card {
+
+        min-height: 300px;
+
+        position: relative;
+    }
+
+
+    /* ==========================================
+       CTA
+    ========================================== */
+
+    .cta {
+
+        min-height: 100svh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: flex-start;
+
+        padding: 100px 6%;
+
+        position: relative;
+
+        overflow: hidden;
+    }
+
+
+    /*
+       Coffee gets a large visual area
+       on the left.
+    */
+
+    .cta-coffee-space {
+
+        display: block;
+
+        position: absolute;
+
+        left: 0;
+
+        top: 0;
+
+        width: 48%;
+
+        height: 100%;
+
+        pointer-events: none;
+    }
+
+
+    .cta-content {
+    width: 58%;
+
+    margin-left: 42%;
+
+    padding-left: 4%;
+
+    z-index: 5;
+}
+
+   .cta-content h2 {
+
+    font-size: clamp(54px, 17vw, 72px);
+
+    line-height: 0.82;
+
+    letter-spacing: -3px;
+}
+
+
+    .cta-content > p:not(.eyebrow) {
+
+        max-width: 100%;
+
+        margin-top: 25px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    .cta button {
+
+        margin-top: 28px;
+
+        padding: 14px 25px;
+
+        font-size: 13px;
+    }
+
 }
